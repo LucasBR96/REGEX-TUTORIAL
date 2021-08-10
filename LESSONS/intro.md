@@ -1,4 +1,16 @@
-CASE 1 --------------------------------------------------
+# Characters and their meaning
+
+Broadly speaking, I like to split the Regex characters in two groups.
+
+The first ones are the literal characters. Wicht, you guessed, should be literally searched by the code. they are:
+
+1. all letters ( lower and upper case )
+2. all numerals ( 0 , 1 ... 9 )
+3. the underscore
+
+to illustrate better, here is an example: the regex "cat" matches the word **cat** in the sentence "i have a cat and
+
+## CASE 1 
 
    .   -> anything but a newline
    \.  -> literal dot
