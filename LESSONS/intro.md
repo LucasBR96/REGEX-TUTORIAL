@@ -14,11 +14,11 @@ Now what makes regex really useful are the special characters. In a pattern they
 
 Let's take the dollar sign character. In a pattern, they mean "end of the string". so the pattern "cat$" will only match the second "cat" in the sentence "black cat, white **cat**".
 
-The special characters are **[]{}()\?!*=+^$** ( The ones I remember at least ). In the following lessons each one will be given the proper attention owed. Except one..
+   The special characters are **[]{}|()\?!*=+^$** ( The ones I remember at least ). In the following lessons each one will be given the proper attention owed. Except one..
 
-You might be wondering: "What if I want to match a literal dollar sign for something like finding all the price tags in text?". For that I'll introduce you to the ( probably already known ) **\** ( backslash ) character. This is the most special of the charachters, as he flips the status of the character to its right.
+You might be wondering: "What if I want to match a literal dollar sign for something like finding all the price tags in text?". For that I'll introduce you to the ( probably already known ) **\\** ( backslash ) character. This is the most special of the charachters, as he flips the status of the character to its right.
 
-Back the dollar sign character, if want to find all the price tags in a sentence, you'll use "\$" as pattern, matching all dollar signs in the sentence: "the shirt was **$**10 while the shoes were **$**25" It should be noted, however, that the regex only matches the dollar sign, not the following number.
+Back the dollar sign character, if want to find all the price tags in a sentence, you'll use "\\$" as pattern, matching all dollar signs in the sentence: "the shirt was **$**10 while the shoes were **$** 25" It should be noted, however, that the regex only matches the dollar sign, not the following number.
 
 The backslash works for 
 
