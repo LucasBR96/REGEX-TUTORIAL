@@ -24,11 +24,11 @@ The backslash works the other way arround. To the left of a literal character, i
 
 ## CASE 1 
 
-   .   -> anything but a newline
-   \.  -> literal dot
-   {n} -> repeat exactly n times
-   ^   -> begin
-   $   -> end
+   .   -> anything but a newline\
+   \.  -> literal dot           \
+   {n} -> repeat exactly n times\
+   ^   -> begin                 \
+   $   -> end                   \
 
    "^.{3}\..{3}\..{3}\..{3}$" matches:
 
@@ -38,8 +38,8 @@ The backslash works the other way arround. To the left of a literal character, i
 
 ## CASE 2 
 
-   \d -> digit ( 0 , 1 , 2 ... 9 )
-   \D -> non digit
+   \d -> digit ( 0 , 1 , 2 ... 9 )\
+   \D -> non digit\
 
    "^\d{2}\D\d{2}\D\d{4}$" matches:
 
@@ -49,7 +49,7 @@ The backslash works the other way arround. To the left of a literal character, i
 
 ## CASE 3 
 
-   \s -> whitespace ( simple space, tabs, newlines )
+   \s -> whitespace ( simple space, tabs, newlines )\
    \S -> not whitespace
 
    "^s\s\d{2}\s\S$" matches:
@@ -61,8 +61,8 @@ The backslash works the other way arround. To the left of a literal character, i
    
 ## CASE 4 
 
-   \w -> word char ( a ... z, A .. Z, 0...9, _ )
-   \W -> not word char
+   \w -> word char ( a ... z, A .. Z, 0...9, _ )\
+   \W -> not word char\
    w  -> literal w
 
    "^\w{3}\W$" matches:
@@ -77,9 +77,11 @@ The backslash works the other way arround. To the left of a literal character, i
    characters. Like the dot, to get the literal, you must put
    a backslash before the character, ex:
 
-   \" -> literal quote
-   \^ -> literal hat
+   \" -> literal quote\
+   \^ -> literal hat\
    \\ -> literal backslash
 
    All special chars introduced in the following lessons will
    also follow this rule.
+
+   numbers can also be turned in special characters, but this will be discussed later
