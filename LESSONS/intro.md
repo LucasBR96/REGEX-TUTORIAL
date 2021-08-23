@@ -20,7 +20,7 @@ You might be wondering: "What if I want to match a literal dollar sign for somet
 
 Back the dollar sign character, if want to find all the price tags in a sentence, you'll use "\\$" as pattern, matching all dollar signs in the sentence: "the shirt was **$**10 while the shoes were **$** 25" It should be noted, however, that the regex only matches the dollar sign, not the following number.
 
-The backslash works for 
+The backslash works the other way arround. To the left of a literal character, it turns it into a special one. look at the following examples.
 
 ## CASE 1 
 
@@ -36,11 +36,10 @@ The backslash works for
    " u . 87.+[{.ab "
    "123.456.789.acd"
 
-CASE 2 --------------------------------------------------
+## CASE 2 
 
    \d -> digit ( 0 , 1 , 2 ... 9 )
    \D -> non digit
-   d  -> literal d
 
    "^\d{2}\D\d{2}\D\d{4}$" matches:
 
@@ -48,11 +47,10 @@ CASE 2 --------------------------------------------------
    "90 21~6666"
    "77.77.5555"
 
-CASE 3 --------------------------------------------------
+## CASE 3 
 
    \s -> whitespace ( simple space, tabs, newlines )
    \S -> not whitespace
-   s  -> literal s
 
    "^s\s\d{2}\s\S$" matches:
 
@@ -61,7 +59,7 @@ CASE 3 --------------------------------------------------
    "s 97
    +"
    
-CASE 4 --------------------------------------------------
+## CASE 4 
 
    \w -> word char ( a ... z, A .. Z, 0...9, _ )
    \W -> not word char
@@ -73,7 +71,7 @@ CASE 4 --------------------------------------------------
    "Cd1="
    "Gh2@"
 
-EXTRA CASE ----------------------------------------------
+## OBSERVATIONS 
 
    As you've already guessed, the chars "\.{}^$" are special
    characters. Like the dot, to get the literal, you must put
