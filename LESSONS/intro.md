@@ -32,8 +32,8 @@ The backslash works the other way arround. To the left of a literal character, i
 
    "^.{3}\..{3}\..{3}\..{3}$" matches:
 
-   "abc.def.ghi.jkx"
-   " u . 87.+[{.ab "
+   "abc.def.ghi.jkx"\
+   " u . 87.+[{.ab "\
    "123.456.789.acd"
 
 ## CASE 2 
@@ -43,8 +43,8 @@ The backslash works the other way arround. To the left of a literal character, i
 
    "^\d{2}\D\d{2}\D\d{4}$" matches:
 
-   "12a34b5678"
-   "90 21~6666"
+   "12a34b5678"\
+   "90 21~6666"\
    "77.77.5555"
 
 ## CASE 3 
@@ -54,9 +54,9 @@ The backslash works the other way arround. To the left of a literal character, i
 
    "^s\s\d{2}\s\S$" matches:
 
-   "s 54 A"
-   "s 87 5"
-   "s 97
+   "s 54 A"\
+   "s 87 5"\
+   "s 97   \
    +"
    
 ## CASE 4 
